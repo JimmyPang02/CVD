@@ -19,9 +19,8 @@ CUDA_VISIBLE_DEVICES=${GPU} python -m torch.distributed.launch --nproc_per_node=
 --ori_model_path /inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/pengzimian-241108540199/model/stable-diffusion-v1-5 --unet_subfolder unet_webvidlora_v3 \
 --pose_adaptor_ckpt /inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/pengzimian-241108540199/model/CVD/CameraCtrl.ckpt \
 --motion_module_ckpt /inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/pengzimian-241108540199/model/animatediff/v3_sd15_mm.ckpt \
---epi_module_ckpt ./models//inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/pengzimian-241108540199/model/CVD/cvd.ckpt \
+--epi_module_ckpt /inspire/hdd/ws-f4d69b29-e0a5-44e6-bd92-acf4de9990f0/public-project/pengzimian-241108540199/model/CVD/cvd.ckpt \
 --model_config ./configs/inference_config.yaml \
---civitai_base_model ./models/realisticVisionV60B1_v51VAE.safetensors \
 --caption_file ./assets/cameractrl_prompts.json \
 --zero_first_frame_scale \
 --image_height 256 \
